@@ -1,4 +1,4 @@
-# zoomegle
+# Zoomegle
 
 Zoomegle is intended to be a collaborative education website for anyone interested in college level courses.
 
