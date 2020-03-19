@@ -1,10 +1,9 @@
 var express = require('express')
     app = express()
     mongoose = require('mongoose'),
-    bodyParser = require('body-parser')
-    Class = require('./models/class')
-
-
+    bodyParser = require('body-parser'),
+    subjectRoutes = require('./routes/subject'),
+    classRoutes = require('./routes/class'),
     
     
 mongoose.connect("mongodb+srv://mattfan00:spacelf14@cluster0-uxcbq.mongodb.net/test?retryWrites=true&w=majority", {
@@ -19,10 +18,15 @@ app.use(express.static(__dirname + "/public"))
 
 app.set('view engine', 'ejs')
 
+app.use(subjectRoutes)
+app.use(classRoutes)
 
-app.get("/", (req, res) => {
+
+
+
+app.get("/classes", (req, res) => {
   Class.find({}, (err, classes) => {
-    res.render('index', {classes: classes})
+    res.json(classes)
   })
 })
 

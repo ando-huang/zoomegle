@@ -5,11 +5,7 @@ var classSchema = new mongoose.Schema({
     type: String,
     required: "Cannot be blank"
   },
-  university: {
-    type: String,
-    required: "Cannot be blank"
-  },
-  subject: {
+  link: {
     type: String,
     required: "Cannot be blank"
   }
