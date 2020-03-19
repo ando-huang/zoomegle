@@ -1,22 +1,34 @@
-<!doctype html>
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
 
-<html lang="en">
-<head>
-  <meta charset="utf-8">
+        <title>Zoomegle</title>
+        <meta name="description" content="The HTML5 Herald">
+        <meta name="author" content="SitePoint">
 
-  <title>Zoomegle</title>
-  <meta name="description" content="The HTML5 Herald">
-  <meta name="author" content="SitePoint">
+        <link rel="stylesheet" href="/stylesheets/home.css">
 
-  <link rel="stylesheet" href="/stylesheets/index.css">
+        <div class="header">
+            <h1>
+                <!--insert logo image here-->
+                Zoomegle
+            </h1>
+        </div>
+    </head>
 
-</head>
+    <body>
+        <!--Two big buttons for access courses and add courses-->
+        <div class = "button1">
+            <!--Links to access courses page (index.ejs)-->
+            <a href="index.ejs">Find Courses</a>
+        </div>
 
-<body>
-  <script src="/scripts/index.js"></script>
-  <!-- <a href="https://nyu.zoom.us/j/273586729">Discrete Math Lecture</a> -->
+        <div class = "button2">
+            <!--Links to add courses page-->
+            <a href="addcourse.ejs">Contribute</a>
+        </div>
 
 
-  <%= subjects[0].name %> <a href="/subjects/<%= subjects[0]._id %>"> link</a>
-</body>
+    </body>
+
 </html>
