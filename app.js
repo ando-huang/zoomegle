@@ -1,9 +1,9 @@
 var express = require('express')
     app = express()
     mongoose = require('mongoose'),
-    bodyParser = require('body-parser')
-    Class = require('./models/class'),
-    Subject = require('./models/subject')
+    bodyParser = require('body-parser'),
+    subjectRoutes = require('./routes/subject'),
+    classRoutes = require('./routes/class'),
     
     
 mongoose.connect("mongodb+srv://mattfan00:spacelf14@cluster0-uxcbq.mongodb.net/test?retryWrites=true&w=majority", {
@@ -18,23 +18,15 @@ app.use(express.static(__dirname + "/public"))
 
 app.set('view engine', 'ejs')
 
-app.get("/", (req, res) => {
-  res.redirect("/subjects")
-})
+app.use(subjectRoutes)
+app.use(classRoutes)
 
-app.get("/subjects", (req, res) => {
-  res.send("hi from the subject page")
-})
 
-app.post("/subjects", (req, res) => {
-  Subject.create(req.body, (err, newSubject) => {
-    res.json(newSubject)
-  })
-})
+
 
 app.get("/classes", (req, res) => {
   Class.find({}, (err, classes) => {
-    res.render('index', {classes: classes})
+    res.json(classes)
   })
 })
 

@@ -13,4 +13,4 @@ var subjectSchema = new mongoose.Schema({
   ]
 })
 
-module.export = mongoose.model('Subject', subjectSchema)
+module.exports = mongoose.model('Subject', subjectSchema)
