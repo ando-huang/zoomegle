@@ -9,6 +9,3 @@ Zoomegle aims to help those whose schedules do not align with their university's
 Feel free to add features or other resources as you see fit, this project is meant to push education forward in these difficult times.
 
 Stay safe all!
-
-
-https://docs.google.com/spreadsheets/d/16Ov4xAzryOIrMg-GFOI8_MyAZPm017iy3Z8T5i_gSeg/edit?usp=sharing
