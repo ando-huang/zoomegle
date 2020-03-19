@@ -14,6 +14,13 @@
 
 <body>
   <script src="/scripts/index.js"></script>
-  <a href="https://nyu.zoom.us/j/273586729">Discrete Math Lecture</a>
+  <!-- <a href="https://nyu.zoom.us/j/273586729">Discrete Math Lecture</a> -->
+
+
+  <ul>
+    <% for(var i=0; i<classes.length; i++) { %>
+      <li>Name: <%= classes[i].name %>, University: <%= classes[i].university %>, Subject: <%= classes[i].subject %> </li>
+    <% } %>
+  </ul>
 </body>
 </html>
