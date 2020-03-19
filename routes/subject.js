@@ -14,8 +14,8 @@ router.get("/subjects", (req, res) => {
 
 router.get("/subjects/:subjectId", (req, res) => {
   Subject.findById(req.params.subjectId).populate("classes").exec(function(err, foundSubject) {
-    // res.render("classes", {classes: foundSubject.classes})
-    res.json(foundSubject.classes)
+    res.render("classes", {classes: foundSubject.classes})
+    // res.json(foundSubject.classes)
   })
 })
 
