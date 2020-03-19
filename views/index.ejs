@@ -17,10 +17,6 @@
   <!-- <a href="https://nyu.zoom.us/j/273586729">Discrete Math Lecture</a> -->
 
 
-  <ul>
-    <% for(var i=0; i<classes.length; i++) { %>
-      <li>Name: <%= classes[i].name %>, University: <%= classes[i].university %>, Subject: <%= classes[i].subject %> </li>
-    <% } %>
-  </ul>
+  <%= subjects[0].name %> <a href="<%= subjects[0]._id %>"> link</a>
 </body>
 </html>

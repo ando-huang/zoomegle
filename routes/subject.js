@@ -8,13 +8,14 @@ router.get("/", (req, res) => {
 
 router.get("/subjects", (req, res) => {
   Subject.find({}, (err, subjects) => {
-    res.json(subjects)
+    res.render("index", {subjects: subjects})
   })
 })
 
 router.get("/subjects/:subjectId", (req, res) => {
   Subject.findById(req.params.subjectId).populate("classes").exec(function(err, foundSubject) {
-    res.json(foundSubject)
+    // res.render("classes", {classes: foundSubject.classes})
+    res.json(foundSubject.classes)
   })
 })
 
