@@ -21,17 +21,18 @@
         <!-- <a href="https://nyu.zoom.us/j/273586729">Discrete Math Lecture</a> -->
         <div class = "tab">
         <% for(var subject of subjects) { %>
-            <button class = "tablinks" onclick="openClass"(event, <%= subject.name %>><%= subjects[0].name %></button>
-  
+            <!-- <button class = "tablinks" onclick="openClass"(event, <%= subject.name %>><%= subjects[0].name %></button> -->
+            
+            <button class="tablinks"><a href="/subjects/<%= subject._id %>"><%= subject.name %></a></button>
         <%}%>
         </div>
 
-        <%= subjects[0].name %> 
+        <!-- <%= subjects[0].name %> 
         <a href="/subjects/<%= subjects[0]._id %>"> --course description--</a>
 
         <div id = "<%= subjects[0].name %>" class = tabcontent>
             <h3><%= subjects[0].name %></h3>
-        </div>
+        </div> -->
     </body>
 
 </html>
