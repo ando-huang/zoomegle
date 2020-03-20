@@ -17,18 +17,21 @@
     </head>
 
     <body>
-        <!--Two big buttons for access courses and add courses-->
-        <div class = "button1">
-            <!--Links to access courses page (index.ejs)-->
-            <a href="index.ejs">Find Courses</a>
+        <script src="/scripts/index.js"></script>
+        <!-- <a href="https://nyu.zoom.us/j/273586729">Discrete Math Lecture</a> -->
+        <div class = "tab">
+        <% for(var subject of subjects) { %>
+            <button class = "tablinks" onclick="openClass"(event, <%= subject.name %>><%= subjects[0].name %></button>
+  
+        <%}%>
         </div>
 
-        <div class = "button2">
-            <!--Links to add courses page-->
-            <a href="addcourse.ejs">Contribute</a>
+        <%= subjects[0].name %> 
+        <a href="/subjects/<%= subjects[0]._id %>"> --course description--</a>
+
+        <div id = "<%= subjects[0].name %>" class = tabcontent>
+            <h3><%= subjects[0].name %></h3>
         </div>
-
-
     </body>
 
 </html>
