@@ -1,1 +1,49 @@
-<%= classes[0].name %>
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+
+        <title>Zoomegle</title>
+        <meta name="description" content="The HTML5 Herald">
+        <meta name="author" content="SitePoint">
+
+        <link rel="icon" href='/images/browsericon.png'>
+        <link rel="stylesheet" href="/stylesheets/courses.css">
+
+        <div class="header">
+            <h1>
+                Subject
+            </h1>
+            <p>SIZEOF total recordings</p>
+            <button class = "btnTab" onclick="window.location.href = 'index.ejs'">Home</button>
+            <button class = "btnTab" onclick="window.location.href = 'contribute.ejs'">Contribute</button>
+            
+        </div>
+
+
+    </head>
+
+    <body>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Course ID</th>
+            <th>Class Name</th>
+            <th>Link</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for(var i = 0; i < classes.length; i++) { %>
+            <tr>
+              <th><%= i + 1 %></th>
+              <td><%= classes[i].name %></td>
+              <td><a href="<%= classes[i].link %>">Recording</a></td>
+            </tr>
+          <% } %>
+        </tbody>
+      </table>
+
+
+    </body>
+
+</html>
