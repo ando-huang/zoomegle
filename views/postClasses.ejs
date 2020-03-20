@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+  <body>
+    <form action="/classes" method="POST">
+      Subject:
+      <select name="newClass[subjectId]">
+        <% for(const subject of subjects) { %>
+          <option value="<%= subject._id %>"><%= subject.name %></option>
+        <% } %>
+      </select> 
+      Class name:
+      <input type="text" name="newClass[name]">
+      Link:
+      <input type="text" name="newClass[link]">
+      <button type="submit">Add Class</button>
+    </form>
+  </body>
+</html>
+
