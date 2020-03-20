@@ -22,17 +22,11 @@
         <script src="/scripts/index.js"></script>
         
         <div class = "tab">
-            <!--Ins ejs for loop to create buttons for all elems-->
-            <button class = "tablinks" onclick="openClass"(event, coursename)>SUBJECT</button>
-  
+        <% for(var subject of subjects) { %>            
+            <button class="tablinks" onclick="openClass"(event, coursename)><a href="/subjects/<%= subject._id %>"><%= subject.name %></a></button>
+        <%}%>
         </div>
-
         <div class = "tabcontent">
-
-        <!--<%= subjects[0].name %>--> 
-        <!--<a href="/subjects/<%= subjects[0]._id %>"> --course description--</a>
-        <div id = "<%= subjects[0].name %>" class = tabcontent>
-            <h3><%= subjects[0].name %></h3>-->
             <h1>SUBJECT</h1>
             <div class = "table">
                 <table>
