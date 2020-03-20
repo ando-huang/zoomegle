@@ -5,6 +5,9 @@
         <title>Zoomegle</title>
         <meta name="description" content="The HTML5 Herald">
         <meta name="author" content="SitePoint">
+
+        <link rel="icon" href='/images/browsericon.png'>
+        <link rel="stylesheet" href="/stylesheets/home.css">
     </head>
 
     <body>
@@ -12,7 +15,7 @@
       <table>
         <thead>
           <tr>
-            <th>#</th>
+            <th>Course ID</th>
             <th>Class Name</th>
             <th>Link</th>
           </tr>
@@ -22,11 +25,12 @@
             <tr>
               <th><%= i + 1 %></th>
               <td><%= classes[i].name %></td>
-              <td><a href="<%= classes[i].link %>">link</a></td>
+              <td><a href="<%= classes[i].link %>">Recording</a></td>
             </tr>
           <% } %>
         </tbody>
       </table>
+
 
     </body>
 
