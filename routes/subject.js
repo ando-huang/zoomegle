@@ -12,6 +12,12 @@ router.get("/subjects", (req, res) => {
   })
 })
 
+router.get("/api/subjects", (req, res) => {
+  Subject.find({}, (err, subjects) => {
+    res.json(subjects)
+  })
+})
+
 router.get("/subjects/:subjectId", (req, res) => {
   Subject.findById(req.params.subjectId).populate("classes").exec(function(err, foundSubject) {
     res.render("classes", {classes: foundSubject.classes})

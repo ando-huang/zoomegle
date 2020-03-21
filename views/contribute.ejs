@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="/scripts/contribute.js"></script>
+  </head>
+  <body>
+    <div id="addClasses">
+      <div>
+        <select name="subjectId">
+          <% for(const subject of subjects) { %>
+            <option value="<%= subject._id %>"><%= subject.name %></option>
+          <% } %>
+        </select> 
+        <input type="text" placeholder="Class name" name="name">
+        <input type="text" placeholder="Link" name="link">
+      </div>
+    </div>
+    <div>
+      <button type="button" onClick="addClass()">Add another class</button>
+    </div>
+    <div>
+      <button type="button" onClick="submitClasses()">Submit</button>
+    </div>
+  </body>
+</html>
+
