@@ -24,7 +24,9 @@
   <!-- <a href="https://nyu.zoom.us/j/273586729">Discrete Math Lecture</a> -->
   <div class = "tab">
     <% for(var subject of subjects) { %>
-    <button class = "tablinks" onclick="openClass"(event, <%= subject.name %>><%= subjects[0].name %></button>
+    <button class = "tablinks" onclick="openClass"(event, <%= subject.name %>>
+      <%= subjects[0].name %>
+    </button>
   
     <%}%>
   </div>
