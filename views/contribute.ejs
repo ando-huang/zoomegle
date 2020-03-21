@@ -4,6 +4,20 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="/scripts/contribute.js"></script>
+    <link rel="icon" href='/images/browsericon.png'>
+    <link rel="stylesheet" href="/stylesheets/contribute.css">
+
+    <title>Zoomegle</title>
+    <div class="header">
+      <h1>
+          <!--insert logo image here-->
+          Zoomegle
+      </h1>
+      <p>X total recordings</p>
+      <button class = "btnTab" onclick="window.location.href = '/'">Home</button>
+      
+  </div>
+    
   </head>
   <body>
     <div id="addClasses">
@@ -13,15 +27,17 @@
             <option value="<%= subject._id %>"><%= subject.name %></option>
           <% } %>
         </select> 
-        <input type="text" placeholder="Class name" name="name">
+        <input type="text" placeholder="Class Name" name="name">
         <input type="text" placeholder="Link" name="link">
       </div>
     </div>
-    <div>
-      <button type="button" onClick="addClass()">Add another class</button>
-    </div>
-    <div>
-      <button type="button" onClick="submitClasses()">Submit</button>
+    <div class="btns">
+      <div>
+        <button type="button" class ="btnTab" onClick="addClass()">Add another class</button>
+      </div>
+      <div>
+        <button type="button" class ="btnTab" onClick="submitClasses()">Submit</button>
+      </div>
     </div>
   </body>
 </html>

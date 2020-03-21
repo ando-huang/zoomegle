@@ -1,0 +1,63 @@
+body {
+    background-color:#0099ff;
+    font-family: Arial;
+    margin: 0;
+  }
+
+  p{
+      font-size: 25px;
+  }
+
+  .header{
+    padding: 60px;
+    background-color: #0099ff;
+    font-family: Arial;
+    color: white;
+   
+    text-align: center;
+    font-size: 30px;
+}
+.row:after {
+    display: table;
+    clear: both;
+  }
+  
+  .column{
+    float: left;
+    width: 50%;
+    padding: 5%;
+    text-align: center;
+    border: none;
+    background-color: #0099ff;
+    color: white;
+  }
+
+
+.btns{
+    margin: auto;
+    text-align: center;
+    width: 100%;
+}
+
+.btnTab{
+    border: none;
+    color: inherit;
+    background-color: inherit;
+    font-size: 35px;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 20px;
+    margin: none;
+    color: white;
+}
+
+.btnTab:hover{
+    color: black;
+  }
+
+/* styling for the boxes to type in*/
+.inputs{
+    font-size: 30px;
+    
+}
+

@@ -1,83 +1,83 @@
 .header{
-  padding: 60px;
-  background-color: #0099ff;
-  font-family: Arial;
-  color: white;
- 
-  text-align: center;
-  font-size: 30px;
-}
-
-body {
-    background-color: white;
+    padding: 60px;
+    background-color: #0099ff;
     font-family: Arial;
-    margin: 0;
+    color: white;
+   
+    text-align: center;
+    font-size: 30px;
   }
   
+  body {
+      background-color: white;
+      font-family: Arial;
+      margin: 0;
+    }
+    
+    
+    .tab{
+      overflow: hidden;
+      border: 1px solid gray;
+      background-color: #f1f1f1;
+    }
+    
+    .tab button{
+      background-color: inherit;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      transition: 0.3s;
+      font-size: 17px;
+    }
+    
+    .tab button:hover{
+        background-color: #ddd;
+    }
+    
+    .tab button:active{
+      background-color: #ccc;
+    }
+    
+    .tabcontent {
+      display: none;
+      background-color: #f1f1f1;
+      padding: 6px 12px;
+      border: 1px solid #ccc;
+      border-top: none;
+    }
   
-  .tab{
-    overflow: hidden;
-    border: 1px solid gray;
-    background-color: #f1f1f1;
+    table{
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
   }
   
-  .tab button{
-    background-color: inherit;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    transition: 0.3s;
-    font-size: 17px;
+  td, th {
+      border: 1px solid #ddd;
+      text-align: left;
+      padding: 8px;
   }
   
-  .tab button:hover{
+  tr:nth-child(even){
       background-color: #ddd;
   }
   
-  .tab button:active{
-    background-color: #ccc;
+  .btnTab{
+    border: none;
+    color: inherit;
+    background-color: inherit;
+    font-size: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 20px;
   }
   
-  .tabcontent {
-    display: none;
-    background-color: #f1f1f1;
-    padding: 6px 12px;
-    border: 1px solid #ccc;
-    border-top: none;
+  .btnTab:hover{
+    color: black;
   }
-
-  table{
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-}
-
-td, th {
-    border: 1px solid #ddd;
-    text-align: left;
-    padding: 8px;
-}
-
-tr:nth-child(even){
-    background-color: #ddd;
-}
-
-.btnTab{
-  border: none;
-  color: inherit;
-  background-color: inherit;
-  font-size: 30px;
-  cursor: pointer;
-  transition: 0.3s;
-  padding: 20px;
-}
-
-.btnTab:hover{
-  color: black;
-}
-
-p{
-  font-size: 25px;
-}
+  
+  p{
+    font-size: 25px;
+  }
