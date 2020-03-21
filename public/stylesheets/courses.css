@@ -1,15 +1,17 @@
 .header{
-    padding: 14px 14px;
-    float: left;
-    background-color: white;
-    font-family: Arial;
-    cursor: pointer;
-    
+  padding: 60px;
+  background-color: #0099ff;
+  font-family: Arial;
+  color: white;
+ 
+  text-align: center;
+  font-size: 30px;
 }
 
 body {
-    background-color:#0099ff;
+    background-color: white;
     font-family: Arial;
+    margin: 0;
   }
   
   
@@ -45,3 +47,37 @@ body {
     border: 1px solid #ccc;
     border-top: none;
   }
+
+  table{
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){
+    background-color: #ddd;
+}
+
+.btnTab{
+  border: none;
+  color: inherit;
+  background-color: inherit;
+  font-size: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+  padding: 20px;
+}
+
+.btnTab:hover{
+  color: black;
+}
+
+p{
+  font-size: 25px;
+}

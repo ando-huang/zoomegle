@@ -1,7 +1,11 @@
 body {
-    background-color:white;
+    background-color:#0099ff;
     font-family: Arial;
     margin: 0;
+  }
+
+  p{
+      font-size: 25px;
   }
 
   .header{
@@ -13,59 +17,49 @@ body {
     text-align: center;
     font-size: 30px;
 }
-  
-  .tab{
-    
-    overflow: hidden;
-    border: 1px solid gray;
-    background-color: #f1f1f1;
+.row:after {
+    display: table;
+    clear: both;
   }
   
-  .tab button{
-    background-color: inherit;
+  .column{
+    float: left;
+    width: 50%;
+    padding: 5%;
+    text-align: center;
     border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 15px 20px;
-    transition: 0.3s;
-    font-size: 17px;
+    background-color: #0099ff;
+    color: white;
   }
-  
-  .tab button:hover{
-      background-color: #ddd;
-  }
-  
-  /*highlights active buttons*/
-  .tab button:active{
-    background-color: #ccc;
-    
-  }
-  
 
-  /*this holds the style for everything contained inside each tab*/
-  .tabcontent {
-    
+
+.btnTab{
+    border: none;
+    color: inherit;
     background-color: inherit;
+    font-size: 35px;
+    cursor: pointer;
+    transition: 0.3s;
     padding: 20px;
-    border: 1px solid #ccc;
-    border-bottom: none;
-    
+    margin: none;
+}
+
+.btnTab:hover{
+    color: black;
   }
 
-  /*insert table css from matt*/
-table{
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
+
+
+a{
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    transition: 0.3s;
 }
 
-td, th {
-    border: 1px solid #ddd;
-    text-align: left;
-    padding: 8px;
+a:hover{
+    color:black;
+    font-size: 33px;
 }
 
-tr:nth-child(even){
-    background-color: #ddd;
-}
 

@@ -14,26 +14,19 @@
                 <!--insert logo image here-->
                 Zoomegle
             </h1>
-            <p>SIZEOF total recordings</p>
+            <p>X total recordings</p>
             <button class = "btnTab" onclick="window.location.href = 'contribute.ejs'">Contribute</button>
         </div>
     </head>
 
     <body>
         <script src="/scripts/index.js"></script>
-        
-        <div class = "tab">
-            <div class = "btnTab">
-                <% for(var subject of subjects) { %>            
-                    <button onclick="openClass"(event, coursename)><a href="/subjects/<%= subject._id %>"><%= subject.name %></a></button>
-                <%}%>
-            </div>
-            
-  
-        </div>
-
-        
-        
+        <% for(var subject of subjects) { %>
+        <div class = "row">
+            <!--Should populate alternating columns with tabs-->        
+                <button class="column" onclick="openClass"(event, coursename)><a href="/subjects/<%= subject._id %>"><%= subject.name %></a></button>
+        </div> 
+        <%}%>       
     </body>
 
 </html>
