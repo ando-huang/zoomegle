@@ -1,63 +1,101 @@
 body {
-    background-color:#0099ff;
-    font-family: Arial;
-    margin: 0;
-  }
-
-  p{
-      font-size: 25px;
-  }
-
-  .header{
-    padding: 60px;
-    background-color: #0099ff;
-    font-family: Arial;
-    color: white;
-   
-    text-align: center;
-    font-size: 30px;
-}
-.row:after {
-    display: table;
-    clear: both;
-  }
-  
-  .column{
-    float: left;
-    width: 50%;
-    padding: 5%;
-    text-align: center;
-    border: none;
-    background-color: #0099ff;
-    color: white;
-  }
-
-
-.btns{
-    margin: auto;
-    text-align: center;
-    width: 100%;
+  font-family: Arial;
+  margin: 0;
 }
 
-.btnTab{
-    border: none;
-    color: inherit;
-    background-color: inherit;
-    font-size: 35px;
-    cursor: pointer;
-    transition: 0.3s;
-    padding: 20px;
-    margin: none;
-    color: white;
+.header{
+  padding: 60px;
+  padding-bottom: 30px;
+  background-color: #0099ff;
+  font-family: Arial;
+  color: white;
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 30px; 
 }
 
-.btnTab:hover{
-    color: black;
-  }
-
-/* styling for the boxes to type in*/
-.inputs{
-    font-size: 30px;
-    
+.logo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 15px 20px;
+  font-weight: 700;
+  text-decoration: none;
+  color: white;
 }
 
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.class {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.class>select {
+  margin: 15px ;
+  font-size: 15px;
+  width: 150px;
+  background-color: white;
+  border: 2px solid black;
+}
+
+.class>input {
+  margin: 15px ;
+  border: none;
+  border-bottom: 3px solid black;
+  font-size: 15px;
+  padding: 10px;
+}
+
+.btns {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.btns>button {
+  margin: 0 5px;
+}
+
+.btn{
+  color: #0099ff;
+  background-color: inherit;
+  font-size: 25px;
+  font-weight: 700;
+  padding: 3px 10px;
+  padding-top: 1px;
+  cursor: pointer;
+  transition: 0.3s;
+  border: 3px solid #0099ff;
+  border-radius: 10px;
+}
+
+.btn:hover{
+  color: white;
+  background-color: #0099ff;
+}
+
+button:focus {
+  outline:0;
+}
+
+.submit-btn {
+  font-weight: 500;
+  font-size: 18px;
+  padding-top: 3px;
+}
+
+.delete-btn {
+  background-color: inherit;
+  color: red;
+  border: none;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+}
