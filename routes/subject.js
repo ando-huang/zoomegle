@@ -8,7 +8,14 @@ router.get("/", (req, res) => {
 
 router.get("/subjects", (req, res) => {
   Subject.find({}, (err, subjects) => {
-    res.render("index", {subjects: subjects})
+    var numRecordings = 0;
+    subjects.forEach(subject => {
+      numRecordings += subject.classes.length;
+    });
+    res.render("index", {
+      subjects: subjects,
+      numRecordings: numRecordings
+    })
   })
 })
 
@@ -20,7 +27,10 @@ router.get("/api/subjects", (req, res) => {
 
 router.get("/subjects/:subjectId", (req, res) => {
   Subject.findById(req.params.subjectId).populate("classes").exec(function(err, foundSubject) {
-    res.render("classes", {classes: foundSubject.classes})
+    res.render("classes", {
+      classes: foundSubject.classes,
+      subjectName: foundSubject.name
+    })
     // res.json(foundSubject.classes)
   })
 })
