@@ -19,6 +19,10 @@ router.get("/subjects", (req, res) => {
   })
 })
 
+router.get("/subjects/new", (req, res) => {
+  res.render('addSubject')
+})
+
 router.get("/api/subjects", (req, res) => {
   Subject.find({}, (err, subjects) => {
     res.json(subjects)
@@ -36,6 +40,13 @@ router.get("/subjects/:subjectId", (req, res) => {
 })
 
 router.post("/subjects", (req, res) => {
+  Subject.create(req.body, (err, newSubject) => {
+    console.log(newSubject)
+    res.redirect('/subjects/new')
+  })
+})
+
+router.post("/api/subjects", (req, res) => {
   Subject.create(req.body, (err, newSubject) => {
     res.json(newSubject)
   })
