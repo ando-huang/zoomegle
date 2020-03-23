@@ -9,34 +9,33 @@
 
     <title>Zoomegle</title>
     <div class="header">
-      <h1>
-          <!--insert logo image here-->
+      <a href="/" class=logo>
           Zoomegle
-      </h1>
-      <p>X total recordings</p>
-      <button class = "btnTab" onclick="window.location.href = '/'">Home</button>
-      
-  </div>
+      </a>
+      <h2>
+          
+          Contribute your classes
+      </h2>
+    </div>
     
   </head>
   <body>
-    <div id="addClasses">
-      <div class = "inputs">
-        <select name="subjectId">
-          <% for(const subject of subjects) { %>
-            <option value="<%= subject._id %>"><%= subject.name %></option>
-          <% } %>
-        </select> 
-        <input type="text" placeholder="Class Name" name="name">
-        <input type="text" placeholder="Link" name="link">
+    <div class="form">
+      <div id="addClasses">
+        <div class="class">
+          <select name="subjectId">
+            <% for(const subject of subjects) { %>
+              <option value="<%= subject._id %>"><%= subject.name %></option>
+            <% } %>
+          </select> 
+          <input type="text" placeholder="Class Name" name="name">
+          <input type="text" placeholder="Link" name="link">
+          <button class="delete-btn" onClick="deleteClass.call(this)">x</button>
+        </div>
       </div>
-    </div>
-    <div class="btns">
-      <div>
-        <button type="button" class ="btnTab" onClick="addClass()">Add another class</button>
-      </div>
-      <div>
-        <button type="button" class ="btnTab" onClick="submitClasses()">Submit</button>
+      <div class="btns">  
+        <button type="button" class ="btn" onClick="addClass()">+</button>
+        <button type="button" class ="btn submit-btn" onClick="submitClasses()">Submit</button>
       </div>
     </div>
   </body>

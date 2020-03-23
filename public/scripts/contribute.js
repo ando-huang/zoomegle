@@ -1,6 +1,5 @@
 console.log("hello from the contribute page")
 
-
 async function addClass() {
   let subjects = await getSubjects()
   var select = $('<select>', {
@@ -10,6 +9,7 @@ async function addClass() {
   })
   select.attr({name: 'subjectId'})
   var div = document.createElement('div')
+  div.setAttribute('class', 'class')
   select.appendTo(div)
   var classInput = $('<input>').attr({
       type: 'text',
@@ -21,8 +21,15 @@ async function addClass() {
     placeholder: 'Link',
     name: 'link'
   })  
+  var deleteButton = $('<button>', {
+    html: 'x'
+  }).attr({
+    class: 'delete-btn',
+    onClick: 'deleteClass.call(this)'
+  })
   classInput.appendTo(div)
   linkInput.appendTo(div)
+  deleteButton.appendTo(div)
   $('#addClasses').append(div)
 }
 
@@ -45,6 +52,11 @@ function submitClasses() {
 
   window.location.href = '/';
 }
+
+var deleteClass = function() {
+  $(this).parent('div').remove()
+}
+
 
 async function getSubjects() {
   return fetch('http://localhost:3002/api/subjects')
