@@ -8,7 +8,7 @@ var express = require('express')
 
     // mongodb+srv://mattfan00:spacelf14@cluster0-uxcbq.mongodb.net/test?retryWrites=true&w=majority
     
-mongoose.connect(process.env.MONGODB_URI, {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://mattfan00:spacelf14@cluster0-uxcbq.mongodb.net/test?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useCreateIndex: true,
   useUnifiedTopology: true
