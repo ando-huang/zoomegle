@@ -56,4 +56,4 @@ app.delete("/:classId", (req, res) => {
   })
 })
 
-app.listen(3002, () => console.log("Started zoomegle server"))
+app.listen(process.env.PORT || 3002, () => console.log("Started zoomegle server"))
